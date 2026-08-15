@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f2414;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a7545;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Custom Military Gradient & Glassmorphism */
+.military-gradient {
+  background: linear-gradient(135deg, #0f2414 0%, #1b3b22 50%, #244a2b 100%);
+}
+
+.military-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.military-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(27, 59, 34, 0.15);
+  border-color: #d4af37;
+}
+
+.gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.badge-rank {
+  background-color: #1b3b22;
+  color: #d4af37;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
